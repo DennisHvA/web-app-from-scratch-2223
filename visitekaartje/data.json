@@ -1,0 +1,25 @@
+{
+    "member": {
+        "id": "cldepc8ku3x1b0av0dgvl1pmw",
+        "slug": null,
+        "name": "Dennis",
+        "prefix": "de",
+        "surname": "Graaf",
+        "role": [
+            "student"
+        ],
+        "nickname": "Den",
+        "avatar": "https://avatars.githubusercontent.com/u/94405795?v=4",
+        "gitHubHandle": "https://github.com/DennisHvA",
+        "bio": "bio",
+        "website": "https://dennisdesigns.nl",
+        "squads": [
+            {
+                "name": "Minor Web",
+                "slug": "minor-web-2023",
+                "cohort": "2023",
+                "website": null
+            }
+        ]
+    }
+}
