@@ -27,3 +27,15 @@ fetch('./data.json')
         const websiteid = document.querySelector("#website")
         websiteid.href = data.member.website
     })
+
+const card = document.querySelector(".content")
+const card2 = document.querySelector("article")
+
+
+// card.addEventListener('click', () => {
+//     card.style.transform = 'rotateY(180deg)'
+// })
+
+card.addEventListener('click', () => {
+    card2.classList.toggle('flip')
+  })
