@@ -5,6 +5,7 @@ fetch('./data.json')
     .then(data => {
 
         const fullname = []
+        // fullname.push`${data.member.name}${data.member.prefix}`
         fullname.push(data.member.name + " " + data.member.prefix + " " + data.member.surname)
         document.querySelector("#name").innerHTML = fullname
 
@@ -29,13 +30,8 @@ fetch('./data.json')
     })
 
 const card = document.querySelector(".content")
-const card2 = document.querySelector("article")
-
+const card2 = document.querySelector("#card")
 
 // card.addEventListener('click', () => {
-//     card.style.transform = 'rotateY(180deg)'
-// })
-
-card.addEventListener('click', () => {
-    card2.classList.toggle('flip')
-  })
+//     card2.classList.toggle('flip')
+//   })

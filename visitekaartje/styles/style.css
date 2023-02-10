@@ -22,7 +22,7 @@ body {
     justify-content: center;
 }
 
-article {
+.card {
     position: absolute;
     width: 20em;
     height: 38em;
@@ -34,14 +34,16 @@ article {
     width: 100%;
     height: 100%;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    transition: transform 1s;
     transform-style: preserve-3d;
-}
-
-.flip .content {
-    transform: rotateY( 180deg ) ;
+    animation: flip 8s infinite ease-out;
+    animation-delay: 8s;
     transition: transform 0.5s;
 }
+
+/* .flip .content {
+    transform: rotateY( 360deg ) ;
+    transition: transform 0.5s;
+} */
 
 .front, .back {
     position: absolute;
@@ -117,7 +119,6 @@ svg {
     margin-left: -12px;
     margin-top: 80px;
     border-radius: 50%;
-    -webkit-backface-visibility: hidden;
     margin-bottom: 50px;
 }
   
@@ -131,7 +132,6 @@ svg {
     content: "";
     display: block;
     border-radius: 50%;
-    -webkit-backface-visibility: hidden;
     animation: wave-animate 3s infinite ease-out;
 }
   
@@ -145,9 +145,17 @@ svg {
     content: "";
     display: block;
     border-radius: 50%;
-    -webkit-backface-visibility: hidden;
     opacity: 0;
-    animation: wave-animate 3s 1.5s ease-out;
+    animation: wave-animate 3s infinite ease-out;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY( 0deg );
+    }
+    12.5%, 100% {
+        transform: rotateY( 360deg )
+    }
 }
   
 @keyframes wave-animate {
