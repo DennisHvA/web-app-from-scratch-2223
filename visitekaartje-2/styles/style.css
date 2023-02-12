@@ -116,9 +116,8 @@ h1 {
 }
 
 .glow{
-    top: -6.5%;
-    left: -0.5%;
-    scale: 0.80;
+    top: -6%;
+    scale: 0.81;
     position: absolute;
     fill: var(--color-4);
     animation: glow 4s infinite;
