@@ -1,0 +1,25 @@
+{
+    "member": {
+        "id": "cldepc8ku3x1b0av0dgvl1pmw",
+        "slug": null,
+        "name": "Dennis",
+        "prefix": "de",
+        "surname": "Graaf",
+        "role": [
+            "student"
+        ],
+        "nickname": "Developer & Designer",
+        "avatar": "./images/logobackground.png",
+        "gitHubHandle": "https://github.com/DennisHvA",
+        "bio": "Mijn naam is Dennis, een ambitieuze jonge vormgever met een goed luisterend oor. Ik vind het leuk om mensen te helpen en samen tot de eindstreep te komen. Verder ben ik erg leergierig en altijd opzoek om nieuwe dingen te leren! ",
+        "website": "https://dennisdesigns.nl",
+        "squads": [
+            {
+                "name": "Minor Web",
+                "slug": "minor-web-2023",
+                "cohort": "2023",
+                "website": null
+            }
+        ]
+    }
+}
