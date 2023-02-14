@@ -4,10 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NS</title>
+    <title>food</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <main>
+        <h1>Epische titel</h1>
+        <section>
+            <h2>Voorkeuren</h2>
+            <section>
+                <label for="male">Man</label>
+                <input type="radio" name="sex" checked>
+                <label for="female">Vrouw</label>
+                <input type="radio" name="sex">
+            </section>
+            <section>
+                <label for="age">leeftijd</label>
+                <input type="text" name="age" value="25">
+            </section>
+            <section>
+                <label for="length">lengte</label>
+                <input type="text" name="length" value="170">
+            </section>
+            <section>
+                <label for="weight">gewicht</label>
+                <input type="text" name="weight" value="65">
+            </section>
+            <section>
+                <label>hoe actief</label>
+                <input type="radio" name="active">
+                <input type="radio" name="active">
+                <input type="radio" name="active" checked>
+                <input type="radio" name="active">
+                <input type="radio" name="active">
+            </section>
+        </section>
+        <button id="button">scan</button>
+        <section class="scanner">
+            <video id="video" width="640" height="480" autoplay></video>
+        </section>
+        <table>
+            <tr>
+                <td>
+                    <img id="img" src="" alt="">
+                </td>
+                <td>
+                    <p id="name"></p>
+                </td>
+                <td>
+                    <p id="kcal"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>leeg</p>
+                </td>
+                <td>
+                    <p>leeg</p>
+                </td>
+                <td>
+                    <p>totaal kcal</p>
+                </td>
+            </tr>
+        </table>
+    </main>
+
     <script src="./scripts/script.js"></script>
 </body>
 </html>
