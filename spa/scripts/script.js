@@ -27,13 +27,6 @@ getData();
 // de camera aankrijgen
 
 const video = document.querySelector('#video')
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-  const constraints = { 
-    video: true,
-    audio: false
-  }
-  navigator.mediaDevices.getUserMedia(constraints).then(stream => video.srcObject = stream);
-}
 
 let formats;
 
@@ -57,5 +50,17 @@ const scanner = document.querySelector(".scanner")
 const button = document.querySelector("#button")
 button.addEventListener('click', () => {
     console.log("test");
-    scanner.classList.toggle("show");
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        const constraints = { 
+          video: true,
+          audio: false
+        }
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(stream => video.srcObject = stream);
+
+        setInterval(detectCode, 100);
+
+        scanner.classList.toggle("show");
+
+    }
 })
