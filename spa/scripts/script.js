@@ -55,10 +55,11 @@ button.addEventListener('click', () => {
           video: true,
           audio: false
         }
+        
         navigator.mediaDevices.getUserMedia(constraints)
         .then(stream => video.srcObject = stream);
 
-        setInterval(detectCode, 100);
+        setInterval(detectCode, 1000);
 
         scanner.classList.toggle("show");
 

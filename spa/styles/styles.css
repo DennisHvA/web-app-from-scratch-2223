@@ -13,14 +13,47 @@ table {
     border-collapse: collapse;
 }
 
-img {
-    height: 10em;
+.scannercontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.scannercontainer .scanner {
+    background-color: black;
+    border-left: 4em solid black;
+    border-right: 4em solid black;
+    border-bottom: 3em solid black;
+    border-top: 3em solid black;
+    position: relative;
 }
 
 .scanner {
     display: none;
 }
 
+.scannercontainer .scanner div {
+    top: 215px;
+    position: absolute;
+    width: 100%;
+    background-color: red;
+    height: 1px;
+    animation: scanning 3s infinite;
+}
+
+.scannercontainer .scanner p {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: white;
+}
+
 .show {
     display: block;
 }
+
+@keyframes scanning {
+    50% {
+      transform: translateY(75px);
+    }
+  }
