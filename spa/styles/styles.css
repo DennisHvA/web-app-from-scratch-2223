@@ -5,13 +5,27 @@
     list-style-type: none;
 }
 
-table, td, th {
-    border: 1px solid;
+.show {
+    display: block;
 }
-  
-table {
-    border-collapse: collapse;
+
+.hide {
+    display: none;
 }
+
+body {
+    background-color: crimson;
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+/* calc */
+
+form > p {
+    display: none;
+}
+
+/* scanner */
 
 .scannercontainer {
     position: relative;
@@ -32,8 +46,21 @@ table {
     display: none;
 }
 
+.scannercontainer .scanner video {
+    width: 100%;
+}
+
+.scannercontainer .scanner p {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 30%;
+    right: 30%;
+    color: white;
+}
+
 .scannercontainer .scanner div {
-    top: 215px;
+    top: 45%;
     position: absolute;
     width: 100%;
     background-color: red;
@@ -41,19 +68,18 @@ table {
     animation: scanning 3s infinite;
 }
 
-.scannercontainer .scanner p {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    color: white;
-}
-
-.show {
-    display: block;
-}
-
 @keyframes scanning {
     50% {
       transform: translateY(75px);
     }
-  }
+}
+
+/* table */
+
+table, td, th {
+    border: 1px solid;
+}
+  
+table {
+    border-collapse: collapse;
+}

@@ -10,37 +10,31 @@
 <body>
     <main>
         <h1>Epische titel</h1>
-        <section>
-            <h2>Voorkeuren</h2>
-            <section>
-                <label for="male">Man</label>
-                <input type="radio" name="sex" checked>
-                <label for="female">Vrouw</label>
-                <input type="radio" name="sex">
-            </section>
-            <section>
-                <label for="age">leeftijd</label>
-                <input type="text" name="age" value="25">
-            </section>
-            <section>
-                <label for="length">lengte</label>
-                <input type="text" name="length" value="170">
-            </section>
-            <section>
-                <label for="weight">gewicht</label>
-                <input type="text" name="weight" value="65">
-            </section>
-            <section>
-                <label>hoe actief</label>
-                <input type="radio" name="active">
-                <input type="radio" name="active">
-                <input type="radio" name="active" checked>
-                <input type="radio" name="active">
-                <input type="radio" name="active">
-            </section>
+        <section class="calc">
+            <p id="form-error"></p>
+            <form class="calc-form" id="calc-form">
+                    <label for="distance" class="top-label">Age:</label>
+                    <input type="text" name="t" id="age" inputmode="numeric" pattern="[0-9]*">
+                        
+                    <select name="gender">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>                              
+                    </select> 
+
+                    <label for="height" class="top-label">Height:</label>
+                    <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
+
+                    <label for="weight" class="top-label">Your weight:</label>
+                    <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
+                    
+                    <button class="form-submit">Calculate</button>
+            </form>
+            <p id="results"></p>
         </section>
+        
         <button id="button">scan</button>
         <button id="button">search</button>
+
         <section class="scannercontainer">
             <section class="scanner">
                 <video id="video" width="640" height="480" autoplay></video>
@@ -50,30 +44,18 @@
         </section>
         <table>
             <tr>
-                <td>
-                    <img id="img" src="" alt="">
-                </td>
-                <td>
-                    <p id="name"></p>
-                </td>
-                <td>
-                    <p id="kcal"></p>
-                </td>
+                <td><img id="img" src="" alt=""></td>
+                <td><p id="name"></p></td>
+                <td><p id="kcal"></p></td>
             </tr>
             <tr>
-                <td>
-                    <p>leeg</p>
-                </td>
-                <td>
-                    <p>leeg</p>
-                </td>
-                <td>
-                    <p>totaal kcal</p>
-                </td>
+                <td><p>leeg</p></td>
+                <td><p>leeg</p></td>
+                <td><p>totaal kcal</p></td>
             </tr>
         </table>
     </main>
 
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
