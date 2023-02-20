@@ -33,7 +33,7 @@ form > p {
     justify-content: center;
 }
 
-.scannercontainer .scanner {
+.scannercontainer section {
     background-color: black;
     border-left: 4em solid black;
     border-right: 4em solid black;
@@ -46,11 +46,11 @@ form > p {
     display: none;
 }
 
-.scannercontainer .scanner video {
+/* .scannercontainer section video {
     width: 100%;
-}
+} */
 
-.scannercontainer .scanner p {
+.scannercontainer section p {
     position: absolute;
     text-align: center;
     top: 50%;
@@ -59,7 +59,7 @@ form > p {
     color: white;
 }
 
-.scannercontainer .scanner div {
+.scannercontainer section div {
     top: 45%;
     position: absolute;
     width: 100%;
