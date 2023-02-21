@@ -2,6 +2,8 @@ const video = document.querySelector('#video')
 
 let formats;
 
+let items = []
+
 BarcodeDetector.getSupportedFormats().then(arr => formats = arr);
 
 const barcodeDetector = new BarcodeDetector({ formats });
@@ -14,29 +16,11 @@ export const detectBarcode = () => {
         
         for (const barcode of codes)  {
         console.log(barcode.rawValue);
+        items.push(barcode.rawValue)
+        console.log(items)
         }
     })
     .catch(err => {
     console.error(err);
     })
 }
-
-const scanner = document.querySelector(".scanner")
-const button = document.querySelector("#button")
-button.addEventListener('click', () => {
-    console.log("test");
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        const constraints = { 
-        video: true,
-        audio: false
-        }
-            
-        navigator.mediaDevices.getUserMedia(constraints)
-        .then(stream => video.srcObject = stream);
-
-        setInterval(detectCode, 1000);
-
-        scanner.classList.toggle("show");
-
-    }
-})

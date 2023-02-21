@@ -2,6 +2,8 @@ import { detectBarcode } from "./detectBarcode.js";
 
 export function enableCamera() {
     const scanner = document.querySelector("#scanner")
+    const startbutton = document.querySelector('#start')
+    const stopbutton = document.querySelector('#stop')
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         const constraints = { 
         video: true,
@@ -18,7 +20,8 @@ export function enableCamera() {
 
         setInterval(detectBarcode, 1000);
 
-        scanner.classList.toggle("scanner");
-
+        scanner.classList.toggle("hide");
+        startbutton.classList.toggle("hide");
+        stopbutton.classList.toggle("hide");
     }
 }

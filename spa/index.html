@@ -31,26 +31,27 @@
             </form>
             <p id="results"></p>
         </section>
-        
-        <button id="start">scan</button>
-        <button id="stop">stop</button>
 
         <section class="scannercontainer">
-            <section class="scanner" class="show" id="scanner">
-                <video id="video" width="640" height="480" autoplay></video>
+            <section class="hide" id="scanner">
+                <video id="video" autoplay></video>
                 <div></div>
                 <p>no camera acces</p>
             </section>
+            <section>
+                <button id="start">scan</button>
+                <button id="stop" class="hide">stop</button>
+            </section>
         </section>
         <table>
-            <tr>
+            <!-- <tr>
                 <td><img id="img" src="" alt=""></td>
                 <td><p id="name"></p></td>
                 <td><p id="kcal"></p></td>
-            </tr>
+            </tr> -->
             <tr>
-                <td><p>leeg</p></td>
-                <td><p>leeg</p></td>
+                <td><p>afbeelding</p></td>
+                <td><p>productnaam</p></td>
                 <td><p>totaal kcal</p></td>
             </tr>
         </table>

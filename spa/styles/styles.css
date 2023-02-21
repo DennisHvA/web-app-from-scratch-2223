@@ -30,27 +30,23 @@ form > p {
 .scannercontainer {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.scannercontainer section {
+.scannercontainer section:first-of-type {
     background-color: black;
-    border-left: 4em solid black;
-    border-right: 4em solid black;
-    border-bottom: 3em solid black;
-    border-top: 3em solid black;
+    border: 1em solid black;
     position: relative;
 }
 
-.scanner {
-    display: none;
+.scannercontainer section:first-of-type video {
+    width: 100%;
+    aspect-ratio: 1.3/1;
+    z-index: 2;
 }
 
-/* .scannercontainer section video {
-    width: 100%;
-} */
-
-.scannercontainer section p {
+.scannercontainer section:first-of-type p {
     position: absolute;
     text-align: center;
     top: 50%;
@@ -59,8 +55,8 @@ form > p {
     color: white;
 }
 
-.scannercontainer section div {
-    top: 45%;
+.scannercontainer section:first-of-type div {
+    top: 40%;
     position: absolute;
     width: 100%;
     background-color: red;
@@ -74,6 +70,11 @@ form > p {
     }
 }
 
+.scannercontainer section:last-of-type {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* table */
 
 table, td, th {
@@ -82,4 +83,8 @@ table, td, th {
   
 table {
     border-collapse: collapse;
+}
+
+table img {
+    width: 10em;
 }
