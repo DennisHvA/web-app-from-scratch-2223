@@ -13,21 +13,30 @@
         <section class="calc">
             <p id="form-error"></p>
             <form class="calc-form" id="calc-form">
+                <section>
                     <label for="distance" class="top-label">Age:</label>
                     <input type="text" name="t" id="age" inputmode="numeric" pattern="[0-9]*">
-                        
+                </section>
+                
+                <section>
+                    <label for="gender">Sex:</label>
                     <select name="gender">
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>                              
                     </select> 
+                </section>
 
+                <section>
                     <label for="height" class="top-label">Height:</label>
                     <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
+                </section>
 
+                <section>
                     <label for="weight" class="top-label">Your weight:</label>
                     <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
+                </section>
                     
-                    <button class="form-submit">Calculate</button>
+                <button class="form-submit">Calculate</button>
             </form>
             <p id="results"></p>
         </section>

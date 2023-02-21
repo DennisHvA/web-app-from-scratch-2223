@@ -1,8 +1,8 @@
+import { getData } from "./getData.js"
+
 const video = document.querySelector('#video')
 
 let formats;
-
-let items = []
 
 BarcodeDetector.getSupportedFormats().then(arr => formats = arr);
 
@@ -16,8 +16,8 @@ export const detectBarcode = () => {
         
         for (const barcode of codes)  {
         console.log(barcode.rawValue);
-        items.push(barcode.rawValue)
-        console.log(items)
+        const value = barcode.rawValue
+            getData(value)
         }
     })
     .catch(err => {

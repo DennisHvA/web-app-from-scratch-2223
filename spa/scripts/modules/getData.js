@@ -1,10 +1,10 @@
 import { renderData } from "./renderData.js"
 
-export function getData (barcode) {
+export function getData (value) {
 
-    barcode = "737628064502"
+    // barcode = "737628064502"
 
-    const url = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
+    const url = `https://world.openfoodfacts.org/api/v0/product/${value}.json`
 
     fetch(url)
     .then((response) => response.json())
