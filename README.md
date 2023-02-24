@@ -34,6 +34,7 @@ Komen eraan
 | Error state                  |       |
 | Calorie berekenen            |       |
 | Check voor dubbele barcode   |       |
+| Product detailpagina         |       |
 
 ## 💻 Installatie
 
