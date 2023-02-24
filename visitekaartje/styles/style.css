@@ -12,6 +12,10 @@
     --color-4: #303131;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     font-family: "Oswald";
     background-color: var(--color-2);
