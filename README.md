@@ -18,12 +18,12 @@ De Healty Food Checker is gebaat bij mensen die ontbrekende data wil toevoegen a
 
 Dit is de Open Food Facts API https://nl.openfoodfacts.org/data
 
-## Wireflow & Activity Diagram
+## 📱 Wireflow & Activity Diagram
 
-komen eraan
+Komen eraan
 
 ## 📋 Functionaliteiten
-| To do                        | Done? |
+| Te doen                      | Klaar? |
 | :--------------------------- | :---- |
 | Camera aan/uit               | ✅    |
 | Zoek barcode                 | ✅    |
@@ -35,14 +35,14 @@ komen eraan
 | Calorie berekenen            |       |
 | Check voor dubbele barcode   |       |
 
-## 💻 Installation
+## 💻 Installatie
 
-installeer deze repository: 
+Installeer deze repository: 
 
 ```
 git clone https://github.com/DennisHvA/web-app-from-scratch-2223
 ```
 
-## ⚖️ License
+## ⚖️ Licentie
 
 De [MIT](https://github.com/DennisHvA/web-app-from-scratch-2223/blob/main/LICENSE) licentie wordt gebruikt
