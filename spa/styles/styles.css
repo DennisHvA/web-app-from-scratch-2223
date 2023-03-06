@@ -21,13 +21,6 @@ main {
     align-items: center;
 }
 
-tr {
-    
-}
-td {
-    width: 33%;
-}
-
 h1 {
     all: unset;
     font-size: 2em;

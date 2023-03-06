@@ -24,4 +24,13 @@ export function renderData(data) {
 
     tr.appendChild(td3)
     td3.textContent = product.cal
+
+    const messageImg = document.querySelector("#message-img");
+    const messageH = document.querySelector("#message-h")
+    const messageP = document.querySelector("#message-p")
+
+    messageImg.src = product.image
+    messageH.innerHTML = product.name
+    messageP.innerHTML = product.cal
+
 }
