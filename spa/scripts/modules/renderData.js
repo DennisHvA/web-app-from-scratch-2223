@@ -14,6 +14,7 @@ export function renderData(data) {
     const imageEl = document.createElement('img');
 
     table.appendChild(tr)
+    
     tr.appendChild(td)
     imageEl.src = product.image
     td.appendChild(imageEl);

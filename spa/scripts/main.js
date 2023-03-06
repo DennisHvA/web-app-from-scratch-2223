@@ -9,11 +9,11 @@ const cameraOff = document.querySelector('#stop')
 cameraOn.addEventListener('click', enableCamera)
 cameraOff.addEventListener('click', disableCamera)
 
-const test = document.querySelectorAll("td")
-console.log(test)
+// const test = document.querySelectorAll("td")
+// console.log(test)
 
-var tdElem = document.querySelector ( "td" );
-var tdText = tdElem.innerHTML;
+// var tdElem = document.querySelectorAll( "td" );
+// var tdText = tdElem.innerHTML;
 
-console.log(tdElem)
-console.log(tdText)
+// console.log(tdElem)
+// console.log(tdText)

@@ -1,4 +1,5 @@
 import { renderData } from "./renderData.js"
+import { errorState } from "./errorState.js"
 
 export function getData (value) {
 
@@ -7,6 +8,21 @@ export function getData (value) {
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
-        renderData(data)
-    });  
+        // console.log("test");
+        // console.log(data);
+        // console.log(data.status)
+        // renderData(data)
+        if(data.status == 0) {
+            console.log("not found")
+            errorState()
+        }
+        else {
+            console.log("found");
+            renderData(data)
+        }
+    })
+    .catch((err) => {
+        console.error(err);
+        // errorState;
+    })
 }

@@ -10,9 +10,8 @@ export function calcForm() {
         return false;
     }
     
-    // <a href="#" id="rs">revise</a>`
     function showResults(calories) {
-        results.innerHTML = `Your basal metabolic rate (BMR) is: <strong>${(calories).toFixed(2)} </strong> calories a day. <a href="#" id="rs">revise</a>`;
+        results.innerHTML = `Je caloriebehoefte is: <strong>${(calories).toFixed(2)} </strong> calorien per dag.<a href="https://en.wikipedia.org/wiki/Harris–Benedict_equation" id="rs">bron voor berekening</a> <br></br> <a href="#" id="rs">reset</a>`;
         results.classList.add('show')
         results.classList.remove('hide')
         errors.classList.add('hide')
@@ -34,28 +33,49 @@ export function calcForm() {
         // Age
         let age = parseFloat(form.age.value);
         if(isNaN(age) || age < 0) {
-            return errorMessage('Please enter a valid age');
+            return errorMessage('Voer een geldige leeftijd in');
         }
        
         // Height
         let height = parseFloat(form.height_cm.value);
         if(isNaN(height) || height < 0) {
-            return errorMessage('Please enter a valid Height in centimeters');
+            return errorMessage('Voer een geldige lengte in centimeters in');
         }        
         // Weight
         let weight = parseFloat(form.weight.value);
         if(isNaN(weight) || weight < 0) {
-            return errorMessage('Please enter a valid weight in kilograms');
+            return errorMessage('Voer een geldig gewicht in kilogram in');
         }   
-          
-        let calories = 0;
+        
+        // Gender
+        let bmr = 0;
         if(form.gender.value == 'Female') {
-            calories = 655.09 + (9.56 * weight) + (1.84 * height) - (4.67 * age);
+            bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
         }  else {
-            calories = 66.47 + (13.75 * weight) + (5 * height) - (6.75 * age);
+            bmr = 88.362 + (13.397  * weight) + (4.799 * height) - (5.677 * age);
         }
-     
+        
+        // Activity
+        let calories = 0;
+        if(form.active.value == '1') {
+            calories = (bmr * 1.2)
+        }
+        if(form.active.value == '2') {
+            calories = (bmr * 1.375)
+        }
+        if(form.active.value == '3') {
+            calories = (bmr * 1.55)
+        }
+        if(form.active.value == '4') {
+            calories = (bmr * 1.725)
+        }
+        if(form.active.value == '5') {
+            calories = (bmr * 1.9)
+        }
+
         showResults(calories);
+
+        console.log(form.age.value)
     }
     
     form.addEventListener('submit', submitHandler);
