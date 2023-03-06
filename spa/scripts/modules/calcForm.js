@@ -11,7 +11,7 @@ export function calcForm() {
     }
     
     function showResults(calories) {
-        results.innerHTML = `Je caloriebehoefte is: <strong>${(calories).toFixed(2)} </strong> calorien per dag.<a href="https://en.wikipedia.org/wiki/Harris–Benedict_equation" id="rs">bron voor berekening</a> <br></br> <a href="#" id="rs">reset</a>`;
+        results.innerHTML = `Je caloriebehoefte is: <strong>${(calories).toFixed(2)} </strong> calorien per dag. <br></br> <a href="#" id="rs">reset</a>`;
         results.classList.add('show')
         results.classList.remove('hide')
         errors.classList.add('hide')

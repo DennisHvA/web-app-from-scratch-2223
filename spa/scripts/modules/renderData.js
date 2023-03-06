@@ -13,11 +13,16 @@ export function renderData(data) {
     const td3 = document.createElement('td');
     const imageEl = document.createElement('img');
 
+    const aEl = document.createElement('a');
     table.appendChild(tr)
     
     tr.appendChild(td)
+
+    aEl.setAttribute("href", "#" + data.code)
+    td.appendChild(aEl)
+
     imageEl.src = product.image
-    td.appendChild(imageEl);
+    aEl.appendChild(imageEl);
 
     tr.appendChild(td2)
     td2.textContent = product.name;
@@ -33,4 +38,16 @@ export function renderData(data) {
     messageH.innerHTML = product.name
     messageP.innerHTML = product.cal
 
+}
+
+export function renderDetail(id, data) {
+    console.log(id);
+
+    const element = document.querySelector("main");
+    element.remove();
+
+    const body = document.querySelector("body");
+    const imageEl = document.createElement('img');
+    imageEl.src = data.product.image_front_url;
+    body.appendChild(imageEl);
 }
