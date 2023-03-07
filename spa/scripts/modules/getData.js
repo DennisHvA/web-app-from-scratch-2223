@@ -4,6 +4,8 @@ import { succesState } from "./succesState.js"
 
 export function getData (value) {
     
+    // value = "0737628064502"
+
     const url = `https://world.openfoodfacts.org/api/v0/product/${value}.json`
 
     fetch(url)
@@ -23,3 +25,5 @@ export function getData (value) {
         console.error(err);
     })
 }
+
+// getData()

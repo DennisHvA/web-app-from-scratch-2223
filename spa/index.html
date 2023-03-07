@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>food</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
         <section class="hide" id="scanner">
             <video id="video" autoplay></video>
             <div class="line" ></div>
-            <button class="hide" id="stop">stop</button>
+            <button class="hide" id="stop">Stop</button>
             <section id="state" class="loading">
                 <div>
                   <div></div>
@@ -24,6 +25,7 @@
         </section>
         <h1>Calorie Checker</h1>
         <section class="calc">
+            <h2>Bereken hoeveel calorieen je op een dag nodig hebt!</h2>
             <p id="form-error"></p>
             <form class="calc-form" id="calc-form">
                 <section>
@@ -60,7 +62,7 @@
                 </section>
 
                 <section>
-                    <label for="active">Activiteit:</label>
+                    <label>Activiteit:</label>
                     <label>
                         <input type="radio" name="active" value="1">
                         Geen tot weinig lichaamsbeweging
@@ -88,27 +90,13 @@
             <p id="results"></p>
         </section>
         <section class="items">
-            <button id="start">scan</button>
-            <table>
-                <!-- <tr>
-                    <td><img id="img" src="" alt=""></td>
-                    <td><p id="name"></p></td>
-                    <td><p id="kcal"></p></td>
-                </tr> -->
-                <!-- <tr>
+            <h2>Scan producten om te kijken hoeveel calorieen erin zitten!</h2>
+            <button id="start">Scan</button>
+            <table id="render">
+                <tr>
                     <td>afbeelding</td>
                     <td>productnaam</td>
                     <td>totaal kcal</td>
-                </tr> -->
-                <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>1</td>
                 </tr>
             </table>
         </section>
