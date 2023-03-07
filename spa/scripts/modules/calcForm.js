@@ -2,6 +2,7 @@ export function calcForm() {
     const form    = document.getElementById('calc-form');
     const results = document.getElementById('results');
     const errors  = document.getElementById('form-error');
+    const table = document.querySelector('#cal')
     
     function errorMessage(msg) {
         errors.innerHTML = msg;
@@ -11,7 +12,8 @@ export function calcForm() {
     }
     
     function showResults(calories) {
-        results.innerHTML = `Je caloriebehoefte is: <strong>${(calories).toFixed(2)} </strong> calorien per dag. <br></br> <a href="#" id="rs">reset</a>`;
+        table.innerHTML = calories.toFixed(0)
+        results.innerHTML = `Je caloriebehoefte is: <strong class="cal">${(calories).toFixed(2)} </strong> calorien per dag. <br></br> <a href="#" id="rs">reset</a>`;
         results.classList.add('show')
         results.classList.remove('hide')
         errors.classList.add('hide')
@@ -83,3 +85,5 @@ export function calcForm() {
 }
 
 calcForm()
+
+// https://codepen.io/team/HMPD/pen/eLgQRX?editors=0010

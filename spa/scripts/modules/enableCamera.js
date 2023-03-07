@@ -1,7 +1,5 @@
 import { detectBarcode } from "./detectBarcode.js";
 
-// https://www.jsnow.io/p/javascript/creating-a-real-time-qr-code-scanner-with-vanilla-javascript-part-1
-
 export function enableCamera() {
     const scanner = document.querySelector("#scanner")
     const startbutton = document.querySelector('#start')
@@ -20,10 +18,12 @@ export function enableCamera() {
         })
         .then(stream => video.srcObject = stream);
 
-        setInterval(detectBarcode, 1000);
+        setInterval(detectBarcode, 3000);
 
         scanner.classList.toggle("hide");
         startbutton.classList.toggle("hide");
         stopbutton.classList.toggle("hide");
     }
 }
+
+// https://www.jsnow.io/p/javascript/creating-a-real-time-qr-code-scanner-with-vanilla-javascript-part-1

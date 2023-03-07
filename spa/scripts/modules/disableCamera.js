@@ -1,5 +1,3 @@
-// https://dev.to/morinoko/stopping-a-webcam-with-javascript-4297
-
 export function disableCamera() {
     const scanner = document.querySelector("#scanner")
     const startbutton = document.querySelector('#start')
@@ -13,3 +11,5 @@ export function disableCamera() {
     startbutton.classList.toggle("hide");
     stopbutton.classList.toggle("hide");
 }
+
+// https://dev.to/morinoko/stopping-a-webcam-with-javascript-4297

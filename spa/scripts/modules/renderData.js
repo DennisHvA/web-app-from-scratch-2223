@@ -40,14 +40,9 @@ export function renderData(data) {
 
 }
 
-export function renderDetail(id, data) {
+export function renderDetail(id) {
     console.log(id);
 
     const element = document.querySelector("main");
     element.remove();
-
-    const body = document.querySelector("body");
-    const imageEl = document.createElement('img');
-    imageEl.src = data.product.image_front_url;
-    body.appendChild(imageEl);
 }

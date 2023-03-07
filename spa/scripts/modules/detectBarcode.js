@@ -1,5 +1,5 @@
 import { getData } from "./getData.js"
-import { checkBarcode } from "./checkBarcode.js";
+// import { checkBarcode } from "./checkBarcode.js";
 
 const video = document.querySelector('#video')
 
@@ -18,8 +18,8 @@ export const detectBarcode = () => {
         for (const barcode of codes)  {
         console.log(barcode.rawValue);
         const value = barcode.rawValue;
-            // getData(value)
-            checkBarcode(value)
+            getData(value)
+            // checkBarcode(value)
         }
     })
     .catch(err => {
