@@ -5,8 +5,12 @@ export function router() {
         '': () => {
             // console.log("hallo")
         },
+        // ':id': id => {
+        //     renderDetail(id);
+        // }
         ':id': id => {
             renderDetail(id);
+            console.log("detail")
         }
     })
 }

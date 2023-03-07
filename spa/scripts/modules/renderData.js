@@ -41,8 +41,25 @@ export function renderData(data) {
 }
 
 export function renderDetail(id) {
-    console.log(id);
+    // console.log(id);
 
-    const element = document.querySelector("main");
-    element.remove();
+    // const element = document.querySelector("main");
+    // element.remove();
+    const detailSection = document.getElementById("detail-page");
+    const url = `https://world.openfoodfacts.org/api/v0/product/${id}.json`
+
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        const title = data.product.generic_name;
+        
+        const createTitle = document.createElement("h1");
+        createTitle.textContent = title;
+        detailSection.appendChild(createTitle)
+
+        const createLink = document.createElement("a");
+        createLink.textContent = "terug"
+        createLink.setAttribute("href", "")
+        detailSection.appendChild(createLink)
+    })
 }
