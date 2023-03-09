@@ -1,4 +1,5 @@
 import { detectBarcode } from "./detectBarcode.js";
+import { loadingState } from "./cameraState.js";
 
 export function enableCamera() {
     const main = document.querySelector("main")
@@ -25,6 +26,8 @@ export function enableCamera() {
         scanner.classList.toggle("hide");
         startbutton.classList.toggle("hide");
         stopbutton.classList.toggle("hide");
+
+        loadingState();
     }
 }
 

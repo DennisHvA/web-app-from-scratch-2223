@@ -35,12 +35,19 @@ Komen eraan
 | Loading state                | ✅    |
 | Error state                  | ✅    |
 | Calorie berekenen            | ✅    |
+| Product detailpagina         | ✅    |
 | Styling                      |       |
-| Product detailpagina         |       |
 
 ## 🚧 Commit proces
 
-* [Eerste fetch, begin formulier en start voor barcode scanner](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/34113f88bb5328bbbd91605e6e37f926993130e4)|
+* [Eerste fetch, begin formulier en start voor barcode scanner](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/34113f88bb5328bbbd91605e6e37f926993130e4)
+* [Scanner met een knop](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/a05693f7bb8960dc7772bf4144b6a62776049df7)
+* [Basis in modules en een werkend formulier](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/a05693f7bb8960dc7772bf4144b6a62776049df7)
+* [Scanner leest de barcode en rendert in HTML](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/1b5595cf28c9a34b0ecbb55926e86bf41c8714c7)
+* [Readme](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/f6b989d85ba7c3c4f0aee2fe977d3e63d0ef641e)
+* [Werkende states](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/0f83b83f0cb67a20e48801ec9f73eb8bd1f23d3b)
+* [Refactor](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/85edf18ba0638d66f28b3834d34b29b97c8859cd)
+
 
 ## 💻 Installatie
 

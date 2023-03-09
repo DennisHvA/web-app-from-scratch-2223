@@ -1,6 +1,5 @@
 import { renderData, renderDetail } from "./renderData.js"
-import { errorState } from "./cameraState.js"
-import { succesState } from "./cameraState.js"
+import { errorState, succesState } from "./cameraState.js"
 
 export function getData (value) {
     
