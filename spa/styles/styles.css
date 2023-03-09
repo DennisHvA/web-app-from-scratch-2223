@@ -342,13 +342,13 @@ td:nth-of-type(3) {
     width: 3em;
 }
 
-.cal {
+/* .cal {
     font-weight: bold;
     background-image: linear-gradient(#cc2b36, #cc2b36);
     background-repeat: no-repeat;
     background-size: 100% 0.4em;
     background-position: 0 85%;
-}
+} */
 
 table {
     border-collapse: collapse;
