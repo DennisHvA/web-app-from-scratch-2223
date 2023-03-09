@@ -61,15 +61,16 @@ export function renderDetail(data) {
     createTitle.textContent = title;
     detailSection.appendChild(createTitle)
 
-    const createText = document.createElement("p");
-    createText.textContent = brand;
-    detailSection.appendChild(createText)
+    const createBrand = document.createElement("h2");
+    createBrand.textContent = brand;
+    detailSection.appendChild(createBrand)
 
     const createImage = document.createElement("img")
     createImage.src = image
     detailSection.appendChild(createImage);
 
-    createText.textContent = cal;
+    const createText = document.createElement("p");
+    createText.textContent = "Calorien: " + cal;
     detailSection.appendChild(createText)
 
     const createLink = document.createElement("a");
