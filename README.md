@@ -22,7 +22,7 @@ Dit is de Open Food Facts API https://nl.openfoodfacts.org/data
 
 ## 📱 Wireflow & Activity Diagram
 
-Komen eraan
+<img width="841" alt="Scherm­afbeelding 2023-03-09 om 13 33 59" src="https://user-images.githubusercontent.com/94405795/224024684-1ffed726-051c-4430-a7c3-9b9c64284656.png">
 
 ## 📋 Functionaliteiten
 | Te doen                      | Klaar? |
@@ -38,7 +38,7 @@ Komen eraan
 | Product detailpagina         | ✅    |
 | Styling                      |       |
 
-## 🚧 Commit proces
+## 🚧 (Commit) Proces
 
 * [Eerste fetch, begin formulier en start voor barcode scanner](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/34113f88bb5328bbbd91605e6e37f926993130e4)
 * [Scanner met een knop](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/a05693f7bb8960dc7772bf4144b6a62776049df7)
@@ -47,7 +47,6 @@ Komen eraan
 * [Readme](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/f6b989d85ba7c3c4f0aee2fe977d3e63d0ef641e)
 * [Werkende states](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/0f83b83f0cb67a20e48801ec9f73eb8bd1f23d3b)
 * [Refactor](https://github.com/DennisHvA/web-app-from-scratch-2223/commit/85edf18ba0638d66f28b3834d34b29b97c8859cd)
-
 
 ## 💻 Installatie
 
