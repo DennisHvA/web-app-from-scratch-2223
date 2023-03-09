@@ -22,7 +22,7 @@ Dit is de Open Food Facts API https://nl.openfoodfacts.org/data
 
 ## 📱 Wireflow & Activity Diagram
 
-<img width="841" alt="Scherm­afbeelding 2023-03-09 om 13 33 59" src="https://user-images.githubusercontent.com/94405795/224024684-1ffed726-051c-4430-a7c3-9b9c64284656.png">
+<img width="807" alt="Scherm­afbeelding 2023-03-09 om 13 46 07" src="https://user-images.githubusercontent.com/94405795/224027194-b07c1a79-61c4-4956-a0fe-9383e3f806aa.png">
 
 ## 📋 Functionaliteiten
 | Te doen                      | Klaar? |
