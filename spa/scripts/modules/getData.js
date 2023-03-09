@@ -10,8 +10,8 @@ export function getData (value) {
     .then((data) => {
         if(data.status == 1) {
             console.log("found")
-            succesState()
             renderData(data)
+            succesState()
         }
         else {
             console.log("not found");
