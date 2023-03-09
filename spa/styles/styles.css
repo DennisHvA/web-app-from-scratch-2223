@@ -9,6 +9,10 @@
 /* default */
 /* ---------- */
 
+.fullscreen {
+    overflow: hidden;
+}
+
 .show {
     display: block;
 }
@@ -24,9 +28,6 @@ body, button {
 main {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h1 {
@@ -41,7 +42,7 @@ h2 {
     font-weight: 400;
 }
 
-button {
+button, a {
     all: unset;
     padding: 1em;
 }
@@ -51,6 +52,11 @@ button {
     width: 20em;
 }
 
+#home, #detail-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* ---------- */
 /* scanner */
 /* ---------- */
@@ -62,6 +68,7 @@ button {
     background-color: black;
     border: 1em solid black;
     display: flex;
+
 }
 
 #scanner video {
@@ -201,12 +208,11 @@ button {
     clip-path: path('M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z');
 }
   
-.error img, p {
+.error img, .error p {
     display: none;
 }
   
 /* succes */
-  
 .succes {
     background-color: lime;
 }
@@ -241,7 +247,7 @@ button {
 }
 
 /* ---------- */
-/* calc */
+/* form */
 /* ---------- */
 
 .calc {
@@ -294,6 +300,12 @@ form > button {
     color: white;
 }
 
+#rs, .detail-page a {
+    display: block;
+    width: 2.5em;
+    background-color: black;
+    color: white;
+}
 /* ---------- */
 /* table */
 /* ---------- */

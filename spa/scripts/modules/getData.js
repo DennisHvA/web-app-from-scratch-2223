@@ -1,11 +1,9 @@
-import { renderData } from "./renderData.js"
-import { errorState } from "./errorState.js"
-import { succesState } from "./succesState.js"
+import { renderData, renderDetail } from "./renderData.js"
+import { errorState } from "./cameraState.js"
+import { succesState } from "./cameraState.js"
 
 export function getData (value) {
     
-    value = "0737628064502"
-
     const url = `https://world.openfoodfacts.org/api/v0/product/${value}.json`
 
     fetch(url)
@@ -26,4 +24,16 @@ export function getData (value) {
     })
 }
 
-getData()
+export function getDetail (id) {
+    
+    const url = `https://world.openfoodfacts.org/api/v0/product/${id}.json`
+
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        renderDetail(data)
+    })
+    .catch((err) => {
+        console.error(err);
+    })
+}

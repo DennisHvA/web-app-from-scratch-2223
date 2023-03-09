@@ -37,29 +37,43 @@ export function renderData(data) {
     messageImg.src = product.image
     messageH.innerHTML = product.name
     messageP.innerHTML = product.cal
-
 }
 
-export function renderDetail(id) {
-    // console.log(id);
-
-    // const element = document.querySelector("main");
-    // element.remove();
+export function renderDetail(data) {
+    const homeSection = document.querySelector("#home");
+    homeSection.remove();
     const detailSection = document.getElementById("detail-page");
-    const url = `https://world.openfoodfacts.org/api/v0/product/${id}.json`
 
-    fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        const title = data.product.generic_name;
+    const title = data.product.generic_name;
+    const brand = data.product.brands;
+    const image = data.product.image_front_url;
+
+    const cal = data.product.nutriments['energy-kcal_100g']
+    const caffeine = data.product.nutriments['caffeine_100g']
+    const carbo = data.product.nutriments['carbohydrates_100g']
+    const fat = data.product.nutriments['fat_100g']
+    const fiber = data.product.nutriments['fiber_100g']
+    const protein = data.product.nutriments['proteins_100g']
+    const salt = data.product.nutriments['salt_100g']
+    const sugar = data.product.nutriments['fat_100g']
         
-        const createTitle = document.createElement("h1");
-        createTitle.textContent = title;
-        detailSection.appendChild(createTitle)
+    const createTitle = document.createElement("h1");
+    createTitle.textContent = title;
+    detailSection.appendChild(createTitle)
 
-        const createLink = document.createElement("a");
-        createLink.textContent = "terug"
-        createLink.setAttribute("href", "")
-        detailSection.appendChild(createLink)
-    })
+    const createText = document.createElement("p");
+    createText.textContent = brand;
+    detailSection.appendChild(createText)
+
+    const createImage = document.createElement("img")
+    createImage.src = image
+    detailSection.appendChild(createImage);
+
+    createText.textContent = cal;
+    detailSection.appendChild(createText)
+
+    const createLink = document.createElement("a");
+    createLink.textContent = "terug"
+    createLink.setAttribute("href", "")
+    detailSection.appendChild(createLink)
 }

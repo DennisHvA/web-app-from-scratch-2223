@@ -1,15 +1,12 @@
-import { renderDetail } from "./renderData.js";
+import { getDetail } from "./getData.js";
 
 export function router() {
     routie({
         '': () => {
-            // console.log("hallo")
+            console.log("home")
         },
-        // ':id': id => {
-        //     renderDetail(id);
-        // }
-        ':id': id => {
-            renderDetail(id);
+        ':id': value => {
+            getDetail(value);
             console.log("detail")
         }
     })

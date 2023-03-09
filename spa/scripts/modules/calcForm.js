@@ -13,7 +13,7 @@ export function calcForm() {
     
     function showResults(calories) {
         table.innerHTML = calories.toFixed(0)
-        results.innerHTML = `Je caloriebehoefte is: <strong class="cal">${(calories).toFixed(2)} </strong> calorien per dag. <br></br> <a href="#" id="rs">reset</a>`;
+        results.innerHTML = `Je caloriebehoefte is: <strong class="cal">${(calories).toFixed(2)} </strong> calorien per dag. <br></br> <a href="#" id="rs">Reset</a>`;
         results.classList.add('show')
         results.classList.remove('hide')
         errors.classList.add('hide')
