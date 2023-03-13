@@ -1,8 +1,8 @@
 export function renderData(data) {
 
     const product = {
+        name: data.product.product_name,
         image: data.product.image_front_url,
-        name: data.product.generic_name,
         cal: data.product.nutriments['energy-kcal_100g']
     }
 
@@ -44,37 +44,27 @@ export function renderDetail(data) {
     homeSection.remove();
     const detailSection = document.getElementById("detail-page");
 
-    const title = data.product.generic_name;
-    const brand = data.product.brands;
-    const image = data.product.image_front_url;
+    const product = {
+        name: data.product.product_name,
+        image: data.product.image_front_url,
+        nutriments: data.product.nutriments
+    }
 
-    const cal = data.product.nutriments['energy-kcal_100g']
-    const caffeine = data.product.nutriments['caffeine_100g']
-    const carbo = data.product.nutriments['carbohydrates_100g']
-    const fat = data.product.nutriments['fat_100g']
-    const fiber = data.product.nutriments['fiber_100g']
-    const protein = data.product.nutriments['proteins_100g']
-    const salt = data.product.nutriments['salt_100g']
-    const sugar = data.product.nutriments['fat_100g']
-        
-    const createTitle = document.createElement("h1");
-    createTitle.textContent = title;
-    detailSection.appendChild(createTitle)
-
-    const createBrand = document.createElement("h2");
-    createBrand.textContent = brand;
-    detailSection.appendChild(createBrand)
-
-    const createImage = document.createElement("img")
-    createImage.src = image
-    detailSection.appendChild(createImage);
-
-    const createText = document.createElement("p");
-    createText.textContent = "Calorien: " + cal;
-    detailSection.appendChild(createText)
-
-    const createLink = document.createElement("a");
-    createLink.textContent = "terug"
-    createLink.setAttribute("href", "")
-    detailSection.appendChild(createLink)
+    const markup = `
+        <img src=${product.image} alt='${product.name}'/>
+        <h1>${product.name}</h1>
+        <h2>Nutriments per 100g</h2>
+        <ul class='nutriments'>
+            <li>Calories: ${product.nutriments['energy-kcal_100g'] ? product.nutriments['energy-kcal_100g'] : '0'}kcal</li>
+            <li>Caffeine: ${ product.nutriments['caffeine_100g'] ? product.nutriments['caffeine_100g'] : '0'}mg</li>
+            <li>Carbohydrates: ${product.nutriments['carbohydrates_100g'] ? product.nutriments['carbohydrates_100g'] : '0'}g</li>
+            <li>Fat: ${product.nutriments['fat_100g'] ? product.nutriments['fat_100g'] : '0'}g</li>
+            <li>Fibers: ${product.nutriments['fiber_100g'] ? product.nutriments['fiber_100g'] : '0'}g</li>
+            <li>Proteins: ${product.nutriments['proteins_100g'] ? product.nutriments['proteins_100g'] : '0'}g</li>
+            <li>Salts: ${product.nutriments['salt_100g'] ? product.nutriments['salt_100g'] : '0'}g</li>
+            <li>Sugars: ${product.nutriments['sugars_100g'] ? product.nutriments['sugars_100g'] : '0'}g</li>
+        </ul>
+        <a href=''>Terug</a>   
+    `
+    detailSection.insertAdjacentHTML('beforeend', markup)
 }

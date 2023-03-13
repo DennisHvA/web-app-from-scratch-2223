@@ -2,6 +2,8 @@ import { renderData, renderDetail } from "./renderData.js"
 import { errorState, succesState } from "./cameraState.js"
 
 export function getData (value) {
+
+    value = "5449000000996"
     
     const url = `https://world.openfoodfacts.org/api/v0/product/${value}.json`
 
@@ -22,6 +24,8 @@ export function getData (value) {
         console.error(err);
     })
 }
+
+getData();
 
 export function getDetail (id) {
     

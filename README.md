@@ -2,6 +2,10 @@
 
 ![soup](https://media0.giphy.com/media/5z63S7ciWbsNU46ZDx/giphy.gif)
 
+## 📋 Opdracht 
+
+Maak in drie weken tijd een client side Single Page web App (SPA). Op basis van gegevens uit de API van je gekozen user story ontwerp, bouw en test je een prototype in drie iteraties. Je schrijft vanille HTML, CSS en JS, en vermijdt zoveel mogelijk het gebruik van frameworks of bibliotheken - met uitzondering van een micro bibliotheek indien nodig.
+
 ## 📖 User story
 
 Als foodie, wil ik tijdens het boodschappen doen een product kunnen scannen, zodat ik meer informatie over het product kan lezen en een goede keuze kan maken of het bij mijn dieet past.
@@ -10,7 +14,7 @@ Met behulp van de Healthy Food Checker API kun je betere voedselkeuzes maken. Ev
 
 ## 🛠 Open Food Facts API
 
- De Caloriechecker is gebaseerd op Open Food Facts een productendatabase over voedsel door iedereen en voor iedereen. Je kan er heel veel informatie vinden, maar ook aan bijdragen producten toe te voegen en/of teksten te verbeteren.
+De Caloriechecker is gebaseerd op Open Food Facts een productendatabase over voedsel door iedereen en voor iedereen. Je kan er heel veel informatie vinden, maar ook aan bijdragen producten toe te voegen en/of teksten te verbeteren.
 
 Lees hier meer over Open Food Facts: https://nl.openfoodfacts.org/discover
 
